@@ -202,28 +202,29 @@ void main()
             #if ENABLE_LIGHTNING == 1// Add Shading
             dst = phong(sampling_pos);
             #if ENABLE_SHADOWING == 1// Add Shadows
-
-            while (inside_volume)
-            {
-
-
+            vec3 shadowing_ray_step = normalize(sampling_pos - light_position) * sampling_distance;
+            vec3 shadowing_sampling_pos = sampling_pos + shadowing_ray_step;
+            bool shadowing_inside_volume = true;
+            bool isBlack = false;
+            while (shadowing_inside_volume) {
                 // get sample
-                float s = get_sample_data(sampling_pos);
+                float next_s = get_sample_data(shadowing_sampling_pos);
 
-                // apply the transfer functions to retrieve color and opacity
-                vec4 color = texture(transfer_texture, vec2(s, s));
-
-                // this is the example for maximum intensity projection
-                max_val.r = max(color.r, max_val.r);
-                max_val.g = max(color.g, max_val.g);
-                max_val.b = max(color.b, max_val.b);
-                max_val.a = max(color.a, max_val.a);
+                if (next_s >= s) {
+                    isBlack = true;
+                    break;
+                }
 
                 // increment the ray sampling position
-                sampling_pos  += ray_increment;
+                shadowing_sampling_pos  += shadowing_ray_step;
 
                 // update the loop termination condition
-                inside_volume  = inside_volume_bounds(sampling_pos);
+                shadowing_inside_volume  = inside_volume_bounds(shadowing_sampling_pos);
+            }
+
+            if (isBlack) {
+                dst = vec4(0,0,0,0);
+                break;
             }
 
                 #endif
