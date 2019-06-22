@@ -52,7 +52,7 @@ PROJECT_LOGO           =
 # If a relative path is entered, it will be relative to the location
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/build/external/glfw-3.0.3/docs
+OUTPUT_DIRECTORY       = /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/build/external/glfw-3.0.3/docs
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create
 # 4096 sub-directories (in 2 levels) under the output directory of each output
@@ -641,7 +641,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # and error messages should be written. If left blank the output is written
 # to stderr.
 
-WARN_LOGFILE           = /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/build/external/glfw-3.0.3/docs/warnings.txt
+WARN_LOGFILE           = /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/build/external/glfw-3.0.3/docs/warnings.txt
 
 #---------------------------------------------------------------------------
 # configuration options related to the input files
@@ -653,17 +653,17 @@ WARN_LOGFILE           = /Users/sharadbrat/Documents/Study/Semester 2/Visualizat
 # with spaces.
 
 INPUT                  =                          \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h       \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/main.dox              \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/news.dox              \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/quick.dox             \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/moving.dox            \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/build.dox             \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/context.dox           \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/monitor.dox           \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/window.dox            \
-                         /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/docs/compat.dox
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h       \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/main.dox              \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/news.dox              \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/quick.dox             \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/moving.dox            \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/build.dox             \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/context.dox           \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/monitor.dox           \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/window.dox            \
+                         /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/docs/compat.dox
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is
@@ -723,7 +723,7 @@ EXCLUDE_SYMBOLS        = APIENTRY GLFWAPI
 # directories that contain example code fragments that are included (see
 # the \include command).
 
-EXAMPLE_PATH           = /Users/sharadbrat/Documents/Study/Semester 2/Visualization/ExSciVis2019/external/glfw-3.0.3/examples
+EXAMPLE_PATH           = /home/IN/bexu8942/Documents/Visualization/Assignment/ExSciVis2019/external/glfw-3.0.3/examples
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp

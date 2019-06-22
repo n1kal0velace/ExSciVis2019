@@ -127,20 +127,41 @@ void main()
     // the traversal loop,
     // termination when the sampling position is outside volume boundarys
     // another termination condition for early ray termination is added
+    float s_sum_r;
+    float s_sum_g;
+    float s_sum_b;
+    float s_sum_a;
+    float total;
+    
     while (inside_volume)
     {
         // get sample
         float s = get_sample_data(sampling_pos);
 
-        // dummy code
-        dst = vec4(sampling_pos, 1.0);
+         // apply the transfer functions to retrieve color and opacity
+        vec4 color = texture(transfer_texture, vec2(s, s));
 
+
+        s_sum_r += color.r;
+        s_sum_g += color.g;
+        s_sum_b += color.b;
+        s_sum_a += color.a;
+        total += 1;
+                
         // increment the ray sampling position
         sampling_pos  += ray_increment;
 
         // update the loop termination condition
         inside_volume  = inside_volume_bounds(sampling_pos);
     }
+
+    float average_r = s_sum_r / total;
+    float average_g = s_sum_g / total;
+    float average_b = s_sum_b / total;
+    float average_a = s_sum_a / total;
+    
+    dst = vec4(average_r, average_g, average_b, average_a);
+
         #endif
 
         #if TASK == 12 || TASK == 13
